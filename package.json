@@ -1,7 +1,7 @@
 {
-  "name": "boilermaker",
+  "name": "videoShareApp",
   "version": "1.0.0",
-  "description": "Some boilerplate code to get you started - get shakin'!",
+  "description": "Watch videos together with friends",
   "engines": {
     "node": ">= 7.0.0"
   },
@@ -19,7 +19,7 @@
     "postinstall": "touch secrets.js",
     "seed": "node script/seed.js",
     "start": "node server",
-    "start-dev": "NODE_ENV='development' npm run build-client-watch & NODE_ENV='development' npm run start-server",
+    "start-dev": "npm run build-client-watch & npm run start-server",
     "start-server": "nodemon server -e html,js,scss --ignore public --ignore client",
     "test": "NODE_ENV='test' mocha \"./server/**/*.spec.js\" \"./client/**/*.spec.js\" \"./script/**/*.spec.js\" --require @babel/polyfill --require @babel/register"
   },
@@ -34,7 +34,7 @@
       "git add"
     ]
   },
-  "author": "Fullstack Academy of Code",
+  "author": "fawcette",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.15.3",
@@ -43,7 +43,7 @@
     "express": "^4.16.3",
     "express-session": "^1.15.1",
     "history": "^4.6.3",
-    "morgan": "^1.8.1",
+    "morgan": "^1.9.1",
     "passport": "^0.3.2",
     "passport-google-oauth": "^1.0.0",
     "pg": "^6.1.2",
@@ -53,6 +53,7 @@
     "react-dom": "^16.4.2",
     "react-redux": "^5.0.2",
     "react-router-dom": "^4.3.1",
+    "react-youtube": "^7.8.0",
     "redux": "^3.6.0",
     "redux-logger": "^2.8.1",
     "redux-thunk": "^2.3.0",
