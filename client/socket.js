@@ -7,7 +7,6 @@ let room = "bobo"
 socket.on('connect', () => {
   console.log('Connected!')
 
-  socket.emit('join-room', room)
 })
 
 export default socket

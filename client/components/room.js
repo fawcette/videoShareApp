@@ -6,15 +6,24 @@ import {Video} from './index'
 /**
  * COMPONENT
  */
-export const Room = props => {
-  const {username} = props
+export class Room extends React.Component {
 
-  return (
-    <div>
-      <h3>Welcome, {username}</h3>
-      <Video />
-    </div>
-  )
+    constructor () {
+        super()
+    }
+
+    render () {
+        const {username} = this.props
+
+        console.log(this.props)
+
+        return (
+            <div>
+            <h3>Welcome, {username}</h3>
+            <Video roomId = {this.props.match.params.username}/>
+            </div>
+        )
+    }
 }
 
 /**
